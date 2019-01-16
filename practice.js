@@ -15,8 +15,11 @@
 */
 
 //Code here
-
-
+let me = {
+  name: "Daniel",
+  age: 45
+};
+me.age;
 
 ////////// PROBLEM 2 //////////
 
@@ -26,24 +29,30 @@
 */
 
 //Code here
-
-
+let favoriteThings = {
+  band: "Metallica",
+  food: "Pizza",
+  person: "Tesla",
+  book: "JavaScript",
+  movie: "Star Wars",
+  holiday: "Christmas"
+};
 
 /*
   After you've made your object, add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
 */
 
 //Code here
-
-
+favoriteThings.car = "Civic";
+favoriteThings.brand = "Honda";
 
 /*
   Now change the value of the food key in your favoriteThings object to be 'Chicken Nuggets' and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
 */
 
 //Code here
-
-
+favoriteThings.food = "Chicken Nuggets";
+favoriteThings.book = "Harry Potter";
 
 ////////// PROBLEM 3 //////////
 
@@ -56,16 +65,19 @@
 */
 
 //Code here
+let backPack = {};
 
-
+var item = "firstPocket";
+backPack[item] = "chapstick";
+backPack.color = "Green";
+// console.log("backPack", backPack);
 
 /*
   After you do the above, alert your entire backPack object.
 */
 
 //Code here
-
-
+console.log("backPack", backPack);
 
 /*
 You probably noticed that it just alerted [object Object].
@@ -75,18 +87,16 @@ Instead, console.log your whole backPack object and then check out the console.
 
 //Code here
 
-
-
 ////////// PROBLEM 4 //////////
 
 // Do not edit the code below.
 var user2 = {
-  name: 'Ty',
+  name: "Ty",
   age: 24,
-  pwHash: 'U+Ldlngx2BYQk',
-  email: 'ty33@gmail.com',
-  birthday: '05/02/1990',
-  username: 'tylermcginnis33'
+  pwHash: "U+Ldlngx2BYQk",
+  email: "ty33@gmail.com",
+  birthday: "05/02/1990",
+  username: "tylermcginnis33"
 };
 // Do not edit the code above.
 
@@ -97,21 +107,12 @@ var user2 = {
 */
 
 //Code Here
-
-
-
-
-
-
+user2.name = "Tyler S. McGinnis";
+user2.email = "tyler.mcginnis@devmounta.in";
+console.log("user2", user2);
 
 /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
 ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
-
-
-
-
-
-
 
 ////////// PROBLEM 5 //////////
 
@@ -120,8 +121,7 @@ var user2 = {
 */
 
 //Code Here
-
-
+let methodCollection = {};
 
 /*
   Now add two methods (functions that are properties on objects) to your methodCollection object. 
@@ -129,16 +129,20 @@ var user2 = {
 */
 
 //Code Here
-
-
+methodCollection.alertHello = function() {
+  alert("hello");
+};
+methodCollection.logHello = function() {
+  console.log("hello");
+};
 
 /*
   Now call your alertHello and logHello methods.
 */
 
 //Code Here
-
-
+methodCollection.alertHello();
+methodCollection.logHello();
 
 ////////// PROBLEM 6 //////////
 
@@ -148,8 +152,13 @@ var user2 = {
 */
 
 //Code Here
-
-
+function makePerson(name, birthday, ssn) {
+  return {
+    name,
+    birthday,
+    ssn
+  };
+}
 
 ////////// PROBLEM 7 //////////
 
@@ -159,5 +168,10 @@ var user2 = {
 */
 
 //Code Here
-
-
+function makeCard(carNumber, expirationDate, securityCode) {
+  return {
+    carNumber,
+    expirationDate,
+    securityCode
+  };
+}
